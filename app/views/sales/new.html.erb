@@ -1,0 +1,41 @@
+<h1>Registro de Venta</h1>
+
+<%= notice %>
+
+<br><br><br>
+
+<%= form_with model: Sale.new, local: true do |f| %>
+  <div>
+    <%= f.label :cod, "Código" %>
+    <%= f.number_field :cod %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :detail, "Detalle" %>
+    <%= f.text_area :detail %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :category, "Categoría" %>
+    <%= f.text_field :category %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :value, "Valor" %>
+    <%= f.number_field :value %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :discount, "Descuento" %>
+    <%= f.number_field :discount %>
+  </div>
+  <br>
+  <div>
+    <%= f.label :tax, "Exento de IVA" %>
+    <%= f.check_box :tax %>
+  </div>
+  <br>
+  <div>
+    <%= f.submit "Enviar" %>
+  </div>
+<% end %>
